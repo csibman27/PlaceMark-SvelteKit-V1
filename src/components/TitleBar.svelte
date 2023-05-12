@@ -13,7 +13,7 @@
         <div class="subtitle is-5"> {subTitle} </div>
     </div>
     <div class="column">
-        <i class="fas fa-donate fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
+        <i class="fas fa-gas-pump fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
         <div class="is-size-7">Placemark-Hapi 0.1</div>
     </div>
 </div>

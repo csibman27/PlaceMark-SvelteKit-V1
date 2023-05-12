@@ -2,12 +2,12 @@
     import depo from "/src/assets/depo.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
-    import LoginForm from "../components/LoginForm.svelte";
+    import SignupForm from "../components/SignupForm.svelte";
 </script>
 
 <div class="columns is-vcentered">
     <div class="column is-two-thirds">
-        <TitleBar title={"Petrol Station Services Inc."} subTitle={"Sign up or Log in"}/>
+        <TitleBar subTitle={"Sign up or Log in"} title={"Petrol Station Services Inc."}/>
     </div>
     <div class="column">
         <WelcomeNavigator/>
@@ -15,13 +15,13 @@
 </div>
 
 <div class="columns">
-    <div class="column has-text-centered">
-        <img alt="depo" src="{depo}" width="300">
-    </div>
     <div class="column">
         <div class="box">
-            <h1 class="title">Login <i class="fas fa-oil-can"></i></h1>
-            <LoginForm/>
+            <h1 class="title">Sign up <i class="fas fa-user-alt"></i></h1>
+            <SignupForm/>
         </div>
+    </div>
+    <div class="column has-text-centered">
+        <img alt="depo" src="{depo}" width="300">
     </div>
 </div>

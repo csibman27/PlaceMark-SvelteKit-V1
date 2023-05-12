@@ -15,10 +15,10 @@
 
 <div class="columns is-vcentered content">
     <div class="column has-text-centered">
-        <img width="300" src="{depo}" alt="homer">
+        <img width="300" src="{depo}" alt="depo">
     </div>
     <div class="column">
-        <h1 class="title">Find you favorite Stations</h1>
+        <h1 class="title">Mark your favorite Station</h1>
         <p>Something will be here!</p>
     </div>
 </div>
