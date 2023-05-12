@@ -2,6 +2,10 @@
     import depo from "/src/assets/depo.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
+    import {getContext} from "svelte";
+
+    const PlacemarkService = getContext("PlacemarkService");
+    PlacemarkService.logout();
 </script>
 
 <div class="columns is-vcentered">

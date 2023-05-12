@@ -1,5 +1,6 @@
 <script>
     import depo from "/src/assets/depo.jpg";
+    import {user} from "../stores.js"
     export let title = "";
     export let subTitle = "";
 </script>
@@ -16,6 +17,10 @@
     </div>
     <div class="column">
         <i class="fas fa-gas-pump fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
-        <div class="is-size-7">Placemark-Hapi 0.1</div>
+        {#if $user.email}
+            <div class="is-size-7">{$user.email} </div>
+        {:else}
+            <div class="is-size-7">Placemark-Svelte 0.2</div>
+        {/if}
     </div>
 </div>

@@ -16,7 +16,7 @@
 
 <div class="columns">
     <div class="column has-text-centered">
-        <img alt="depo" src={depo} width="300"/>
+        <img alt="depo" src={depo} width="500"/>
     </div>
     <div class="column box has-text-centered">
         <h1 class="title is-4">Welcome to Dashboard</h1>
