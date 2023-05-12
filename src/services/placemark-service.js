@@ -1,7 +1,7 @@
 // @ts-nocheck
 import axios from "axios";
 
-export const placemarkService = {
+export const donationService = {
     baseUrl: "http://localhost:4000",
 
     async login(email, password) {
