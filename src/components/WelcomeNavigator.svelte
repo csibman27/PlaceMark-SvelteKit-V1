@@ -5,4 +5,7 @@
     <a href="/#/login" class="column">
         <i class="fas fa-user-edit fa-3x" style="color:green" title="Log in"></i>
     </a>
+    <a href="/#/github" class="column">
+        <i class="fab fa-github fa-3x" style="color:black" title="Log in"></i>
+    </a>
 </div>

@@ -1,5 +1,5 @@
 <script>
-    import depo from "/src/assets/depo.jpg";
+    import signuptips from "/src/assets/sign-up-tip.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import SignupForm from "../components/SignupForm.svelte";
@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="column has-text-centered">
-        <img alt="depo" src="{depo}" width="300">
+        <img alt="signuptips" src="{signuptips}" width="450">
     </div>
 </div>

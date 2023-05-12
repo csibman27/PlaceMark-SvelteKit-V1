@@ -6,7 +6,9 @@
 
 <div class="box has-text-centered columns m-4">
     <div class="column">
-        <img src="{depo}" width="60" alt="img"/>
+        <a href="/#/" class="column">
+            <img src="{depo}" width="60" alt="img"/>
+        </a>
     </div>
     <div class="column">
         <div class="title is-5"> {title} </div>
