@@ -4,7 +4,7 @@
     export let subTitle = "";
 </script>
 
-<div class="box has-text-centered columns m-2">
+<div class="box has-text-centered columns m-4">
     <div class="column">
         <img src="{depo}" width="60" alt="img"/>
     </div>
@@ -14,6 +14,6 @@
     </div>
     <div class="column">
         <i class="fas fa-donate fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
-        <div class="is-size-7">Donation-Hapi 0.1</div>
+        <div class="is-size-7">Placemark-Hapi 0.1</div>
     </div>
 </div>

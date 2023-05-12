@@ -2,23 +2,26 @@
     import depo from "/src/assets/depo.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
+    import LoginForm from "../components/LoginForm.svelte";
 </script>
 
 <div class="columns is-vcentered">
     <div class="column is-two-thirds">
-        <TitleBar title={"Petrol Station Services Inc."} subTitle={"Please Sign up or Log in"}/>
+        <TitleBar title={"Petrol Station Services Inc."} subTitle={"Sign up or Log in"}/>
     </div>
     <div class="column">
         <WelcomeNavigator/>
     </div>
 </div>
 
-<div class="columns is-vcentered content">
+<div class="columns">
     <div class="column has-text-centered">
-        <img width="300" src="{depo}" alt="homer">
+        <img alt="depo" src="{depo}" width="300">
     </div>
     <div class="column">
-        <h1 class="title">Find you favorite Stations</h1>
-        <p>Something will be here!</p>
+        <div class="box">
+            <h1 class="title">Login</h1>
+            <LoginForm/>
+        </div>
     </div>
 </div>
