@@ -1,12 +1,16 @@
 import axios from "axios";
 import {user} from "../stores";
 
+// hapi hosted https://render.com
 export class PlacemarkService {
     baseUrl = "";
 
     constructor(baseUrl) {
+        console.log("test1");
         this.baseUrl = baseUrl;
+        console.log(baseUrl);
         const placemarkCredentials = localStorage.placemark;
+        console.log(placemarkCredentials);
         if (placemarkCredentials) {
             const savedUser = JSON.parse(placemarkCredentials);
             user.set({
@@ -20,6 +24,7 @@ export class PlacemarkService {
     async login(email, password) {
         try {
             const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, {email, password});
+            console.log(response);
             axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
             if (response.data.success) {
                 user.set({
@@ -41,7 +46,7 @@ export class PlacemarkService {
             token: "",
         });
         axios.defaults.headers.common["Authorization"] = "";
-        localStorage.removeItem("donation");
+        localStorage.removeItem("placemark");
     }
 
     async signup(firstName, lastName, email, password) {
@@ -58,31 +63,61 @@ export class PlacemarkService {
             return false;
         }
     }
-
-    async donate(donation) {
+    // Placemarks API
+    async getAllPlacemarks() {
         try {
-            const response = await axios.post(this.baseUrl + "/api/candidates/" + donation.candidate + "/donations", donation);
-            return response.status == 200;
+            const response = await axios.get(this.baseUrl + "/api/placemarks");
+            return response.data;
+        } catch (error) {
+            return [];
+        }
+    }
+
+    async getUserPlacemarks() {
+        const response = await axios.get(this.baseUrl + "/api/placemarks/userplacemarks");
+        return response.data;
+    }
+
+    async addPlacemark(placemarks) {
+        try {
+            const response = await axios.post(this.baseUrl + "/api/placemarks", craft);
+            return response.data;
         } catch (error) {
             return false;
         }
     }
-
-    async getCandidates() {
+    // Users API
+    async getAllUsers() {
         try {
-            const response = await axios.get(this.baseUrl + "/api/candidates");
+            const response = await axios.get(this.baseUrl + "/api/users");
             return response.data;
         } catch (error) {
             return [];
         }
     }
 
-    async getDonations() {
+    async deleteUser(userid) {
         try {
-            const response = await axios.get(this.baseUrl + "/api/donations");
-            return response.data;
+            const response = await axios.delete(
+                this.baseUrl + "/api/users/" + userid
+            );
+            return true;
         } catch (error) {
-            return [];
+            console.log(error);
+            return false;
         }
     }
+
+    async getLoggedInUser() {
+        try {
+            const loggedInUser = await axios.get(
+                this.baseUrl + "/api/users/loggedInUser"
+            );
+            return loggedInUser;
+        } catch (error) {
+            console.log(error);
+            return {};
+        }
+    }
+
 }

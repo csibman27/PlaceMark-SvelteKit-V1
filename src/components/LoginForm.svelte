@@ -1,17 +1,20 @@
 <script>
     import {push} from "svelte-spa-router";
-    import {getContext} from "svelte";
+    import { getContext } from "svelte";
 
     let email = ""
     let password = "";
     let errorMessage = "";
 
-    const donationService = getContext("DonationService");
+    const placemarkService = getContext("PlacemarkService");
+    console.log(placemarkService);
 
     async function login() {
-        let success = await donationService.login(email, password)
+        console.log(`attempting to log in email: ${email} with password: ${password}`)
+        let success = await placemarkService.login(email, password)
+        console.log(success);
         if (success) {
-            push("/donate");
+            push("/dashboard"); // change view to dashboard
         } else {
             email = "";
             password = "";
