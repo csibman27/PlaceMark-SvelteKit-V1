@@ -5,24 +5,6 @@ export class LeafletMap {
     control = {};
 
     overlays = {
-        Wind : L.tileLayer('http://{s}.tile.openweathermap.org/map/wind/{z}/{x}/{y}.png?appid={apiKey}', {
-            maxZoom: 19,
-            attribution: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>',
-            apiKey: "d07c41c125cd5f6376d33028dda4021e",
-            opacity: 0.5
-        }),
-        Clouds : L.tileLayer('http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png?appid={apiKey}', {
-            maxZoom: 19,
-            attribution: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>',
-            apiKey: "d07c41c125cd5f6376d33028dda4021e",
-            opacity: 0.5
-        }),
-        Pressure : L.tileLayer('http://{s}.tile.openweathermap.org/map/pressure/{z}/{x}/{y}.png?appid={apiKey}', {
-            maxZoom: 19,
-            attribution: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>',
-            apiKey: "d07c41c125cd5f6376d33028dda4021e",
-            opacity: 0.5
-        })
     }
 
 

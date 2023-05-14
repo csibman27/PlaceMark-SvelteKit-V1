@@ -1,8 +1,9 @@
 <script>
     import {LeafletMap} from '../services/leaflet-map';
     import {getContext, onMount} from "svelte";
+    import {PlacemarkService} from "../services/placemark-service";
 
-    const sttaionService = getContext("PlacemarkService");
+    const stationService = getContext("PlacemarkService");
 
     const mapConfig = {
         location: {lat: 52.160858, lng: -7.152420},
@@ -12,22 +13,27 @@
     let map = null;
 
     onMount(async () => {
-        map = new LeafletMap("placemark-map", mapConfig);
+        map = new LeafletMap("station-map", mapConfig);
         map.showZoomControl();
+        const stations = await PlacemarkService.getAllStations();
+
+        function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+        }
         map.addLayerGroup('Stations');
         map.showLayerControl();
 
-        const sttaions = await sttaionService.getPlacemarks();
-        sttaions.forEach(staion => {
-            addStationMarker(staion);
+        const station = await stationService.getStation();
+        stations.forEach(station => {
+            addStationMarker(station);
         });
     });
 
-    export function addStationMarker(staion) {
-        const sttaionStr = `${staion.candidate.firstName} ${staion.candidate.lastName} €${staion.amount.toString()}`;
-        map.addMarker({lat: staion.lat, lng: staion.lng}, sttaionStr, "Placemarks");
-        map.moveTo(11, {lat: staion.lat, lng: staion.lng});
+    export function addStationMarker(station) {
+        const stationStr = `${station.candidate.firstName} ${station.candidate.lastName} €${station.amount.toString()}`;
+        map.addMarker({lat: station.lat, lng: station.lng}, stationStr, "Placemarks");
+        map.moveTo(11, {lat: station.lat, lng: station.lng});
     }
 </script>
 
-<div class="box" id="staion-map" style="height:800px"></div>
+<div class="box" id="station-map" style="height:800px"></div>

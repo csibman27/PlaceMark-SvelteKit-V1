@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import { push } from "svelte-spa-router";
     import { getContext } from "svelte";
 
@@ -12,8 +12,9 @@
 
     async function signup() {
         let success = await placemarkService.signup(firstName, lastName, email, password)
+        console.log(success);
         if (success) {
-            push("/donate");
+            push("/login");
         } else {
             errorMessage = "Error Trying to sign up";
         }

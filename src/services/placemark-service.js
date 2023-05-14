@@ -119,4 +119,25 @@ export class PlacemarkService {
         }
     }
 
+    // Station API
+
+    async getStationByPlacemarkId() {
+        try {
+            const response = await axios.get(this.baseUrl + "/api/stations/" );
+            return response.data;
+        } catch (error) {
+            return {};
+        }
+    }
+
+    async getAllStations() {
+        try {
+            const res = await axios.get(`${this.baseUrl}/api/stations/`);
+            return res.data;
+        } catch (error) {
+            console.log("no such id");
+            return null;
+        }
+    }
+
 }

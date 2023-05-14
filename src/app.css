@@ -51,7 +51,7 @@ h1 {
   position: relative; /* added */
   /* width: 100vw; /* added */
   /*height: 1vh; /* added */
-  min-height: 340px; /* this is only to mimic a larger background like your map */
+  /*min-height: 340px; /* this is only to mimic a larger background like your map */
 }
 
 button {
