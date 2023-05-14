@@ -47,6 +47,13 @@ h1 {
   text-align: center;
 }
 
+.box{
+  position: relative; /* added */
+  /* width: 100vw; /* added */
+  /*height: 1vh; /* added */
+  min-height: 340px; /* this is only to mimic a larger background like your map */
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

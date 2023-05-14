@@ -22,7 +22,6 @@
     </div>
 </div>
 
-
 <section class="section">
     <ListPlacemark bind:this={listPlacemarkComponent}/>
     <AddPlacemark on:message={placemarkAdded}/>

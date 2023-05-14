@@ -6,7 +6,6 @@ export class PlacemarkService {
     baseUrl = "";
 
     constructor(baseUrl) {
-        console.log("test1");
         this.baseUrl = baseUrl;
         console.log(baseUrl);
         const placemarkCredentials = localStorage.placemark;

@@ -7,10 +7,11 @@
   import Signup from "./pages/Signup.svelte";
   import Dashboard from "./pages/Dashboard.svelte";
   import { PlacemarkService } from "./services/placemark-service";
+  import Map from "./pages/Map.svelte";
 
 
-  //setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
-  setContext("PlacemarkService", new PlacemarkService("https://placemark-stations2.onrender.com"));
+  //setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
+  //setContext("PlacemarkService", new PlacemarkService("https://placemark-stations2.onrender.com"));
   setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
   let routes = {
     "/": Main,
@@ -18,6 +19,7 @@
     "/signup": Signup,
     "/dashboard": Dashboard,
     "/logout": Main,
+    "/map": Map,
 
 
   }
