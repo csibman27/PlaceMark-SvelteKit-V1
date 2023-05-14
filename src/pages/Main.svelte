@@ -4,8 +4,8 @@
     import TitleBar from "../components/TitleBar.svelte";
     import {getContext} from "svelte";
 
-    const PlacemarkService = getContext("PlacemarkService");
-    PlacemarkService.logout();
+    const placemarkService = getContext("PlacemarkService");
+    placemarkService.logout();
 </script>
 
 <div class="columns is-vcentered">

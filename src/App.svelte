@@ -9,8 +9,9 @@
   import { PlacemarkService } from "./services/placemark-service";
 
 
-  //setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
+  //setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
   setContext("PlacemarkService", new PlacemarkService("https://placemark-stations2.onrender.com"));
+  setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
   let routes = {
     "/": Main,
     "/login": Login,

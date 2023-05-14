@@ -1,5 +1,5 @@
 <script>
-    import {push} from "svelte-spa-router";
+    import { push } from "svelte-spa-router";
     import { getContext } from "svelte";
 
     let email = ""
@@ -14,7 +14,7 @@
         let success = await placemarkService.login(email, password)
         console.log(success);
         if (success) {
-            push("/dashboard"); // change view to dashboard
+            push("/dashboard") // change view to dashboard
         } else {
             email = "";
             password = "";

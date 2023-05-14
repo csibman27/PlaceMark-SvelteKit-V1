@@ -2,7 +2,7 @@
     <a href="/#/feedback" class="column is-2">
         <i class="far fa-thumbs-up fa-3x" style="color:rgb(153, 196, 74)"></i>
     </a>
-    <a href="/#/report" class="column is-2">
+    <a href="/#/analytics" class="column is-2">
         <i class="fas fa-th-list fa-3x" style="color:rgb(63, 122, 139)"></i>
     </a>
     <a href="/#/map" class="column is-2 mx-2">
