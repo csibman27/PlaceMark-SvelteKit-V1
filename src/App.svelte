@@ -8,11 +8,14 @@
   import Dashboard from "./pages/Dashboard.svelte";
   import { PlacemarkService } from "./services/placemark-service";
   import Map from "./pages/Map.svelte";
+  import PlacemarkView from "./pages/PlacemarkView.svelte";
+
 
 
   //setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
   //setContext("PlacemarkService", new PlacemarkService("https://placemark-stations2.onrender.com"));
   setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
+
   let routes = {
     "/": Main,
     "/login": Login,
@@ -20,6 +23,8 @@
     "/dashboard": Dashboard,
     "/logout": Main,
     "/map": Map,
+    "/placemark/:id": PlacemarkView,
+
 
 
   }

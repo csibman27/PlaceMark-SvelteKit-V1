@@ -2,7 +2,7 @@
     import MainNavigator from "../components/MainNavigator.svelte";
     import ListStations from "../components/ListStations.svelte";
     import AddStation from "../components/AddStation.svelte";
-    import MyStationMap from "../components/MyStationMap.svelte";
+    import StationsMap from "../components/StationsMap.svelte";
 
     export let params;
     let listStationComponent = undefined;
@@ -30,5 +30,5 @@
     </div>
 </section>
 <div class="title"> Station Map
-    <MyStationMap on:message={stationAdded} bind:this={stationMap} placemarkId={params.id}/>
+    <StationsMap on:message={stationAdded} bind:this={stationMap} placemarkId={params.id}/>
 </div>
