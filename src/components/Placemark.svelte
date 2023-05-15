@@ -18,7 +18,7 @@
     <h2 class="title">
         {title}
     </h2>
-    <a href="#/craft/{placemarkid}" class="button">
+    <a href="#/placemark/{placemarkid}" class="button">
       <span class="icon is-small">
         <i class="fas fa-folder-open"></i>
       </span>
