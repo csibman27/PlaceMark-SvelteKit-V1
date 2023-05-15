@@ -19,15 +19,15 @@
         map.showLayerControl();
 
         const stations = await stationService.getAllStations();
-        stations.forEach(place => {
-            addStationMarker(place);
+        stations.forEach(station => {
+            addStationMarker(station);
         });
     });
 
-    export function addStationMarker(place) {
-        const stationStr = `${place.candidate.firstName} ${place.candidate.lastName} €${place.amount.toString()}`;
-        map.addMarker({lat: place.lat, lng: place.lng}, stationStr, "Placemarks");
-        map.moveTo(11, {lat: place.lat, lng: place.lng});
+    export function addStationMarker(station) {
+        const stationStr = `${station.candidate.firstName} ${station.candidate.lastName} €${station.amount.toString()}`;
+        map.addMarker({lat: station.lat, lng: station.lng}, stationStr, "Stations");
+        map.moveTo(11, {lat: station.lat, lng: station.lng});
     }
 </script>
 

@@ -9,6 +9,7 @@
   import { PlacemarkService } from "./services/placemark-service";
   import Map from "./pages/Map.svelte";
   import PlacemarkView from "./pages/PlacemarkView.svelte";
+  import Charts from "./pages/Charts.svelte";
 
 
 
@@ -24,6 +25,7 @@
     "/logout": Main,
     "/map": Map,
     "/placemark/:id": PlacemarkView,
+    "/charts": Charts,
 
 
 
