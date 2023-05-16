@@ -4,6 +4,8 @@
     import {PlacemarkService} from "../services/placemark-service";
 
     const stationService = getContext("PlacemarkService");
+    let stationList = [];
+    export let placemarkId;
 
     const mapConfig = {
         location: {lat: 52.160858, lng: -7.152420},
@@ -18,16 +20,14 @@
         map.addLayerGroup('Stations');
         map.showLayerControl();
 
-        const stations = await stationService.getAllStations();
-        stations.forEach(station => {
+        stationList = await stationService.getStationByPlacemarkId(placemarkId);
+        stationList.forEach(station => {
             addStationMarker(station);
         });
     });
 
     export function addStationMarker(station) {
-        const stationStr = `${station.candidate.firstName} ${station.candidate.lastName} €${station.amount.toString()}`;
-        map.addMarker({lat: station.lat, lng: station.lng}, stationStr, "Stations");
-        map.moveTo(11, {lat: station.lat, lng: station.lng});
+        map.addMarker({lat: station.lat, lng: station.lng}, station.title);
     }
 </script>
 

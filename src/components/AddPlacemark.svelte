@@ -2,18 +2,20 @@
     import { createEventDispatcher, getContext } from "svelte";
     import sanitizeHtml from "sanitize-html";
 
-    let title = "";
-    let errorMessage = "";
-    const placemarkService = getContext("CraftspotService");
+    const placemarkService = getContext("PlacemarkService");
     const dispatch = createEventDispatcher();
+
+    let errorMessage = "";
+    let title = "";
 
     async function addPlacemark() {
         const newPlacemark = {
             title: sanitizeHtml(title),
         };
-        const success = await placemarkService.addPlacemark(newPlacemark)
+        const success = await placemarkService.addPlacemark(newPlacemark);
+        console.log(success)
         if(success) {
-            dispatch("message", {craft: newPlacemark,})
+            dispatch("message", {title: newPlacemark,})
             title = "";
         }
     };
@@ -22,7 +24,7 @@
 <form on:submit|preventDefault={addPlacemark}>
     <div class="field has-background-warning-light">
         <label for="title" class="label">Placemark Name</label>
-        <input bind:value={title} id="title" class="input" type="text" placeholder="Enter craft name" name="title" />
+        <input bind:value={title} id="title" class="input" type="text" placeholder="Enter placemark name" name="title" />
     </div>
     <button class="button is-link is-warning">Add Placemark</button>
 </form>

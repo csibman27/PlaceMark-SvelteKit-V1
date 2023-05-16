@@ -19,7 +19,7 @@
 
 </script>
 
-<MainNavigator/>
+<MainNavigator/> PlacemarkView
 <section class="section columns is vcentered">
     <div class="column has-text-centered">
         <div class="title">

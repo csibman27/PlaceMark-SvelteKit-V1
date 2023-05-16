@@ -25,7 +25,7 @@
             <table class="table is-fullwidth is-striped has-background-warning-light">
                 <thead>
                 <tr>
-                    <th>Title</th>
+                    <th>Name</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
                     <th>Category</th>
@@ -46,10 +46,10 @@
                         {station.lng}
                     </td>
                     <td>
-                        {station.description}
+                        {station.category}
                     </td>
                     <td>
-                        {station.category}
+                        {station.description}
                     </td>
                     <td>
                         {station.unleaded_price}

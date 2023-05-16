@@ -10,6 +10,7 @@
   import Map from "./pages/Map.svelte";
   import PlacemarkView from "./pages/PlacemarkView.svelte";
   import Charts from "./pages/Charts.svelte";
+  import StationView from "./pages/StationView.svelte";
 
 
 
@@ -22,10 +23,12 @@
     "/login": Login,
     "/signup": Signup,
     "/dashboard": Dashboard,
+    "/main": Main,
     "/logout": Main,
     "/map": Map,
     "/placemark/:id": PlacemarkView,
     "/charts": Charts,
+    "/station/:stationid": StationView,
 
 
 

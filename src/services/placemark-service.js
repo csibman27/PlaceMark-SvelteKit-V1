@@ -78,6 +78,7 @@ export class PlacemarkService {
         return response.data;
     }
 
+
     async addPlacemark(placemark) {
         try {
             const response = await axios.post(this.baseUrl + "/api/placemarks", placemark);
@@ -86,6 +87,18 @@ export class PlacemarkService {
             return false;
         }
     }
+
+    async deletePlacemark(placemarkid) {
+        try {
+            const response = await axios.delete(
+                this.baseUrl + "/api/placemarks/" + placemarkid
+            );
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
     // Users API
     async getAllUsers() {
         try {
@@ -122,12 +135,15 @@ export class PlacemarkService {
 
     // Station API
 
-    async getStationByPlacemarkId() {
+    async getStationByPlacemarkId(placemarkid) {
         try {
-            const response = await axios.get(this.baseUrl + "/api/stations/" );
+            const response = await axios.get(
+                this.baseUrl + "/api/placemarks/" + placemarkid + "/stations"
+            );
+            console.log("reponse", response);
             return response.data;
         } catch (error) {
-            return {};
+            return [];
         }
     }
 

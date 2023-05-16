@@ -15,7 +15,7 @@
 
 <div class="columns is-vcentered">
     <div class="column is-two-thirds">
-        <TitleBar title={"Petrol Station Services Inc."} />
+        <TitleBar title={"Petrol Station Services Inc. Dashboard"} />
     </div>
     <div class="column">
         <MainNavigator/>
