@@ -70,7 +70,7 @@
                 </a>
             </td>
             <td>
-                <a href="#/placemark/{station.craftid}/station/{station._id}" class="button">
+                <a href="#/placemark/{station.stationid}/station/{station._id}" class="button">
                     <i class="fas fa-pen"></i>
                 </a>
             </td>

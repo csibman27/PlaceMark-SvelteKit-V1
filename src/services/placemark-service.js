@@ -1,5 +1,6 @@
 import axios from "axios";
 import {user} from "../stores";
+import sanitizeHtml from "sanitize-html";
 
 // hapi hosted https://render.com
 export class PlacemarkService {
@@ -77,9 +78,9 @@ export class PlacemarkService {
         return response.data;
     }
 
-    async addPlacemark(placemarks) {
+    async addPlacemark(placemark) {
         try {
-            const response = await axios.post(this.baseUrl + "/api/placemarks", craft);
+            const response = await axios.post(this.baseUrl + "/api/placemarks", placemark);
             return response.data;
         } catch (error) {
             return false;
@@ -137,6 +138,38 @@ export class PlacemarkService {
         } catch (error) {
             console.log("no such id");
             return null;
+        }
+    }
+
+    async getStationById(stationid) {
+        try {
+            const response = await axios.get(this.baseUrl + "/api/stations/" + stationid);
+            return response.data;
+        } catch (error) {
+            return {};
+        }
+    }
+
+    async addStation(stationid, station) {
+        try {
+            const response = await axios.post(
+                this.baseUrl + "/api/placemarks/" + placemarkid + "/stations",
+                station
+            );
+            return response.data;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    async deleteStation(stationid) {
+        try {
+            const response = await axios.delete(
+                this.baseUrl + "/api/stations/" + stationid
+            );
+            return true;
+        } catch (error) {
+            return false;
         }
     }
 
