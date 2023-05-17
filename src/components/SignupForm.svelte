@@ -12,7 +12,7 @@
 
     async function signup() {
         let success = await placemarkService.signup(firstName, lastName, email, password)
-        console.log(success);
+        //console.log(success);
         if (success) {
             push("/login");
         } else {

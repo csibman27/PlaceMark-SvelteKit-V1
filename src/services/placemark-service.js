@@ -52,10 +52,10 @@ export class PlacemarkService {
     async signup(firstName, lastName, email, password) {
         try {
             const userDetails = {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                password: password,
+                firstName: sanitizeHtml(firstName),
+                lastName: sanitizeHtml(lastName),
+                email: sanitizeHtml(email),
+                password: sanitizeHtml(password),
             };
             await axios.post(this.baseUrl + "/api/users", userDetails);
             return true;
@@ -137,10 +137,11 @@ export class PlacemarkService {
 
     async getStationByPlacemarkId(placemarkid) {
         try {
+            console.log("placemark-service: ", placemarkid);
             const response = await axios.get(
                 this.baseUrl + "/api/placemarks/" + placemarkid + "/stations"
             );
-            console.log("reponse", response);
+            console.log("response", response.data);
             return response.data;
         } catch (error) {
             return [];
@@ -169,7 +170,7 @@ export class PlacemarkService {
     async addStation(stationid, station) {
         try {
             const response = await axios.post(
-                this.baseUrl + "/api/placemarks/" + placemarkid + "/stations",
+                this.baseUrl + "/api/placemarks/" + stationid + "/stations",
                 station
             );
             return response.data;
@@ -186,6 +187,18 @@ export class PlacemarkService {
             return true;
         } catch (error) {
             return false;
+        }
+    }
+
+    async updateStation(placemarkid, stationid, station) {
+        try {
+            const response = await axios.post(
+                this.baseUrl + "/api/placemarks/" + placemarkid + "/stations/" + stationid,
+                station
+            );
+            return response.data;
+        } catch (error) {
+            return [];
         }
     }
 

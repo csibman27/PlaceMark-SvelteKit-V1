@@ -7,12 +7,12 @@
     let errorMessage = "";
 
     const placemarkService = getContext("PlacemarkService");
-    console.log(placemarkService);
+    //console.log(placemarkService);
 
     async function login() {
-        console.log(`attempting to log in email: ${email} with password: ${password}`)
+        //console.log(`attempting to log in email: ${email} with password: ${password}`)
         let success = await placemarkService.login(email, password)
-        console.log(success);
+        //console.log(success);
         if (success) {
             push("/dashboard") // change view to dashboard
         } else {

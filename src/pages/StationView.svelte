@@ -25,7 +25,7 @@
             <table class="table is-fullwidth is-striped has-background-warning-light">
                 <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Station Name</th>
                     <th>Latitude</th>
                     <th>Longitude</th>
                     <th>Category</th>
