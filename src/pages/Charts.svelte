@@ -9,7 +9,7 @@
 
 <div class="columns is-vcentered">
     <div class="column is-two-thirds">
-        <TitleBar subTitle={"Placemark Analytics"} title={"Placemark Services Inc."}/>
+        <TitleBar subTitle={"Placemark Charts"} title={"Placemark Services Inc."}/>
     </div>
     <div class="column">
         <MainNavigator/>

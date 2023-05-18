@@ -150,7 +150,7 @@ export class PlacemarkService {
 
     async getAllStations() {
         try {
-            const res = await axios.get(`${this.baseUrl}/api/stations/`);
+            const res = await axios.get(`${this.baseUrl}/api/stations`);
             return res.data;
         } catch (error) {
             console.log("no such id");
@@ -198,6 +198,16 @@ export class PlacemarkService {
             );
             return response.data;
         } catch (error) {
+            return [];
+        }
+    }
+
+    async getAnalytics() {
+        try {
+            const response = await axios.get(this.baseUrl + "/api/analytics");
+            return response.data;
+        } catch (error) {
+            console.log(error);
             return [];
         }
     }

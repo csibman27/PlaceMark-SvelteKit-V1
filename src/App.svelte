@@ -11,6 +11,7 @@
   import PlacemarkView from "./pages/PlacemarkView.svelte";
   import Charts from "./pages/Charts.svelte";
   import StationView from "./pages/StationView.svelte";
+  import Analytics from "./pages/Analytics.svelte";
 
 
 
@@ -29,6 +30,7 @@
     "/placemark/:id": PlacemarkView,
     "/charts": Charts,
     "/station/:stationid": StationView,
+    "/analytics": Analytics,
 
 
 

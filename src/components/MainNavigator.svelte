@@ -1,9 +1,9 @@
 <div class="box has-text-centered columns m--2">
-    <a href="/#/feedback" class="column is-2">
-        <i class="far fa-thumbs-up fa-3x" style="color:rgb(153, 196, 74)"></i>
+    <a href="/#/dashboard" class="column is-2">
+        <i class="fas fa-map-pin fa-3x" style="color:rgb(153, 196, 74)"></i>
     </a>
     <a href="/#/analytics" class="column is-2">
-        <i class="fas fa-th-list fa-3x" style="color:rgb(63, 122, 139)"></i>
+        <i class="far fa-chart-bar fa-3x" style="color:rgb(63, 122, 139)"></i>
     </a>
     <a href="/#/map" class="column is-2 mx-2">
         <i class="fas fa-map-marked-alt fa-3x" style="color:rgb(102, 153, 255)"></i>
