@@ -16,6 +16,7 @@
     const p1 = getContext("PlacemarkService");
     const dispatch = createEventDispatcher();
 
+    // function for adding the form to the list
     async function addStations() {
         const newStation = {
             placemarkid: sanitizeHtml(placemarkId),
@@ -27,8 +28,9 @@
             unleaded_price: sanitizeHtml(unleaded_price),
             diesel_price: sanitizeHtml(diesel_price),
         };
+        // calling api AddStation function from placemark-services
         const success = await p1.addStation(newStation.placemarkid,newStation)
-        console.log("Adding function: ",success)
+        //console.log("Adding function: ",success)
         if (success) {
             dispatch("message", {station: newStation,})
             title = "";
@@ -40,7 +42,7 @@
             diesel_price = "";
         }
         else{
-            alert("Cant add a station please fill ou all required fields")
+            alert("Cant add a station please fill out all required fields")
         }
     }
 </script>
@@ -50,12 +52,12 @@
     <div class="field is-horizontal has-background-warning-light">
         <div class="field-body">
             <div class="field">
-                <label class="label">Station name</label>
-                <input bind:value={title} class="input" type="text" maxlength="20" placeholder="Enter Station Name" name="title" />
+                <label for="title" class="label">Station name</label>
+                <input bind:value={title} id="title" class="input" type="text" maxlength="20" placeholder="Enter Station Name" name="title" />
             </div>
             <div class="field">
-                <label for="title" class="label">Latitude</label>
-                <input bind:value={lat} id="title" class="input" type="number" step="0.0000001" maxlength="10" min="-90.0000000" max="90.0000000" placeholder="Enter Latitude" name="lat" />
+                <label for="lat" class="label">Latitude</label>
+                <input bind:value={lat} id="lat" class="input" type="number" step="0.0000001" maxlength="10" min="-90.0000000" max="90.0000000" placeholder="Enter Latitude" name="lat" />
             </div>
             <div class="field">
                 <label for="lng" class="label">Longitude</label>

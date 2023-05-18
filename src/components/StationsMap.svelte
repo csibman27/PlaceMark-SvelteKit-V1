@@ -1,10 +1,8 @@
 <script>
-    import {LeafletMap} from '../services/leaflet-map';
+    import {LeafletMap} from '../services/leaflet-map.js';
     import {getContext, onMount} from "svelte";
-    import {PlacemarkService} from "../services/placemark-service";
 
     const stationService = getContext("PlacemarkService");
-    let stationList = [];
     export let placemarkId;
 
     const mapConfig = {
@@ -20,7 +18,7 @@
         map.addLayerGroup('Stations');
         map.showLayerControl();
 
-        stationList = await stationService.getStationByPlacemarkId(placemarkId);
+        const stationList = await stationService.getAllStations();
         stationList.forEach(station => {
             addStationMarker(station);
         });
@@ -28,6 +26,7 @@
 
     export function addStationMarker(station) {
         map.addMarker({lat: station.lat, lng: station.lng}, station.title);
+        //map.moveTo(11, {lat: station.lat, lng: station.lng});
     }
 </script>
 

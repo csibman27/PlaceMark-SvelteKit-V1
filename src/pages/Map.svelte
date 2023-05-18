@@ -6,7 +6,7 @@
 
 <div class="columns is-vcentered">
     <div class="column is-two-thirds">
-        <TitleBar subTitle={"Map of Petrol Station Locations"} title={"Donation Services Inc."}/>
+        <TitleBar subTitle={"Map of Station Locations"} title={"Hello."}/>
     </div>
     <div class="column">
         <MainNavigator/>

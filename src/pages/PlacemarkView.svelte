@@ -14,7 +14,7 @@
     }
 
     async function updateList(event) {
-        await listStationComponent.refreshSttaionList();
+        await listStationComponent.refreshStationList();
     }
 
 </script>
