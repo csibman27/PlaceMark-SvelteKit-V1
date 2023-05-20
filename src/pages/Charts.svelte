@@ -1,8 +1,8 @@
 <script>
     import TitleBar from "../components/TitleBar.svelte";
     import MainNavigator from "../components/MainNavigator.svelte";
-    import DonationsMyMethod from "../components/DonationsMyMethod.svelte";
-    import DonationsByCandidate from "../components/DonationsByCandidate.svelte";
+    import Chart1 from "../components/Chart2.svelte";
+    import Chart2 from "../components/Chart1.svelte";
 
     // analytics can be imported
 </script>
@@ -18,9 +18,9 @@
 
 <div class="columns">
     <div class="column has-text-centered">
-        <DonationsMyMethod/>
+        <Chart1/>
     </div>
     <div class="column has-text-centered">
-        <DonationsByCandidate/>
+        <Chart2/>
     </div>
 </div>

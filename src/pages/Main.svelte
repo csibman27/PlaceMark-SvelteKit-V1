@@ -23,6 +23,6 @@
     </div>
     <div class="column">
         <h1 class="title">Mark your favorite Station</h1>
-        <p>Something will be here!</p>
+        <p>Find your favorite station and mark it on the map.</p>
     </div>
 </div>
