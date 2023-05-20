@@ -12,6 +12,7 @@
   import Charts from "./pages/Charts.svelte";
   import StationView from "./pages/StationView.svelte";
   import Analytics from "./pages/Analytics.svelte";
+  import Images from "./pages/Images.svelte";
 
 
 
@@ -31,6 +32,7 @@
     "/charts": Charts,
     "/station/:stationid": StationView,
     "/analytics": Analytics,
+    "/images": Images,
 
 
 

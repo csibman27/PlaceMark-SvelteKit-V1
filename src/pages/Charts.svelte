@@ -1,10 +1,9 @@
 <script>
     import TitleBar from "../components/TitleBar.svelte";
     import MainNavigator from "../components/MainNavigator.svelte";
-    import Chart1 from "../components/Chart2.svelte";
-    import Chart2 from "../components/Chart1.svelte";
+    import Chart1Form from "../components/Chart2Form.svelte";
+    import Chart2Form from "../components/Chart1Form.svelte";
 
-    // analytics can be imported
 </script>
 
 <div class="columns is-vcentered">
@@ -18,9 +17,9 @@
 
 <div class="columns">
     <div class="column has-text-centered">
-        <Chart1/>
+        <Chart1Form/>
     </div>
     <div class="column has-text-centered">
-        <Chart2/>
+        <Chart2Form/>
     </div>
 </div>

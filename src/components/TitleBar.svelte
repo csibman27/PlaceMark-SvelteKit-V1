@@ -14,11 +14,11 @@
         <div class="subtitle is-5"> {subTitle} </div>
     </div>
     <div class="column">
-        <i class="fas fa-gas-pump fa-3x" style="color:rgb(95, 96, 173)" title="Source repo" pos="bottom" uk-tooltip></i>
+        <i class="fas fa-gas-pump fa-3x" style="color:rgb(95, 96, 173)" title="Welcome Bar" pos="bottom" uk-tooltip></i>
         {#if $user.email}
             <div class="is-size-7">Logged in as {$user.email} </div>
         {:else}
-            <div class="is-size-7">Placemark-Svelte 0.2</div>
+            <div class="is-size-7">Placemark-Svelte 0.4</div>
         {/if}
     </div>
 </div>
