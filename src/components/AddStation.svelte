@@ -48,7 +48,7 @@
 </script>
 
 <form on:submit|preventDefault={addStations}>
-    <label class="label">Enter Station Details:</label>
+    <h1 class="label1">Enter Station Details:</h1>
     <div class="field is-horizontal is-fullwidth is-striped">
         <div class="field-body">
             <div class="field">

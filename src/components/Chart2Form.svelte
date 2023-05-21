@@ -22,6 +22,6 @@
     })
 </script>
 
-<h1 className="title is-4">Fuel Prices at lowest</h1>
+<h1 class="title is-4">Fuel Prices at lowest</h1>
 <Chart data={userData} type="line"/>
 
