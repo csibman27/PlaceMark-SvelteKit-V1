@@ -21,6 +21,6 @@
         </div>
     </div>
     <div class="column has-text-centered">
-        <img alt="signuptips" src="{signuptips}" width="450">
+        <!--<img alt="signuptips" src="{signuptips}" width="450">-->
     </div>
 </div>
