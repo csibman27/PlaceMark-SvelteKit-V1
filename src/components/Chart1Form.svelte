@@ -42,6 +42,6 @@
 </script>
 
 <h1 class="title is-4">Fuel Prices at lowest</h1>
-<Chart data={userData} type="bar"/>
+<Chart data={userData} type="line"/>
 <h1 class="title is-4">Total Users</h1>
-<Chart data={usersCount} type="bar"/>
+<Chart data={usersCount} type="pie"/>
