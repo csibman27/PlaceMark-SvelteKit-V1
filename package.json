@@ -21,6 +21,7 @@
     "leaflet": "^1.7.1",
     "sanitize-html": "^2.10.0",
     "svelte-frappe-charts": "^1.9.2",
-    "svelte-spa-router": "^3.3.0"
+    "svelte-spa-router": "^3.3.0",
+    "svelte-lightweight-charts": "^2.2.0"
   }
 }
