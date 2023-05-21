@@ -1,4 +1,5 @@
 <script>
+    import signuptips from "/src/assets/sign-up-tip.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import SignupForm from "../components/SignupForm.svelte";
@@ -21,6 +22,6 @@
         </div>
     </div>
     <div class="column has-text-centered">
-        <!--<img alt="signuptips" src="{signuptips}" width="450">-->
+        <img alt="signuptips" src="{signuptips}" width="450">
     </div>
 </div>
