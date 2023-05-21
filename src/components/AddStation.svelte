@@ -13,7 +13,7 @@
     let errorMessage = "";
 
     export let placemarkId;
-    const p1 = getContext("PlacemarkService");
+    const placemarkStation = getContext("PlacemarkService");
     const dispatch = createEventDispatcher();
 
     // function for adding the form to the list
@@ -29,7 +29,7 @@
             diesel_price: sanitizeHtml(diesel_price),
         };
         // calling api AddStation function from placemark-services
-        const success = await p1.addStation(newStation.placemarkid,newStation)
+        const success = await placemarkStation.addStation(newStation.placemarkid,newStation)
         //console.log("Adding function: ",success)
         if (success) {
             dispatch("message", {station: newStation,})

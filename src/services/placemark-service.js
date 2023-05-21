@@ -201,6 +201,7 @@ export class PlacemarkService {
             return [];
         }
     }
+    // Analytics
 
     async getAnalytics() {
         try {
@@ -209,6 +210,38 @@ export class PlacemarkService {
         } catch (error) {
             console.log(error);
             return [];
+        }
+    }
+
+    // Images
+
+    async uploadImage(stationid, image) {
+        try {
+            const response = await axios.post(
+                this.baseUrl + "/api/stations/" + stationid + "/uploadimage",
+                { imagefile: image },
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+            return true;
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    async deleteImage(stationid, imgid) {
+        try {
+            const response = await axios.delete(
+                this.baseUrl + "/api/stations/" + stationid + "/deleteimage/" + imgid
+            );
+            return true;
+        } catch (error) {
+            console.log(error);
+            return false;
         }
     }
 
