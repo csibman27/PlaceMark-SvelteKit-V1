@@ -133,6 +133,17 @@ export class PlacemarkService {
         }
     }
 
+    async updateUser(userid, user) {
+        try {
+            const response = await axios.post(this.baseUrl + "api/users/updateUser/" + userid, user
+            );
+            return response;
+        } catch (error) {
+            console.log(error);
+            return {};
+        }
+    }
+
     // Station API
 
     async getStationByPlacemarkId(placemarkid) {

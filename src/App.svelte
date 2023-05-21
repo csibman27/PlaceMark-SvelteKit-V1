@@ -12,6 +12,9 @@
   import Charts from "./pages/Charts.svelte";
   import StationView from "./pages/StationView.svelte";
   import Analytics from "./pages/Analytics.svelte";
+  import User from "./pages/User.svelte";
+  import EditStation from "./pages/EditStation.svelte";
+  import Github from "./pages/Github.svelte";
 
 
 
@@ -30,7 +33,10 @@
     "/placemark/:id": PlacemarkView,
     "/charts": Charts,
     "/station/:stationid": StationView,
-    "/analytics": Analytics
+    "/analytics": Analytics,
+    "/user": User,
+    "/placemark/:placemarkidid/station/:stationid": EditStation,
+    "/github": Github
 
 
 

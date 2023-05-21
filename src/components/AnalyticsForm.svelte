@@ -17,7 +17,7 @@
 
 </script>
 
-<div class="box box-link-hover-shadow has-background-warning-light">
+<div class="row align-items-start">
     <h2 class="title">
         Analytics
     </h2>

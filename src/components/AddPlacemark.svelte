@@ -22,11 +22,11 @@
 </script>
 
 <form on:submit|preventDefault={addPlacemark}>
-    <div class="field has-background-warning-light">
+    <div class="field">
         <label for="title" class="label">Placemark Name</label>
         <input bind:value={title} id="title" class="input" type="text" placeholder="Enter placemark name" name="title" />
     </div>
-    <button class="button is-link is-warning">Add Placemark</button>
+    <button class="btn btn-large btn-primary">Add Placemark</button>
 </form>
 {#if errorMessage}
     <div class="section">

@@ -23,7 +23,7 @@
 
 </script>
 
-<table class="table is-fullwidth is-striped has-background-warning-light">
+<table class="table is-fullwidth is-striped">
     <thead>
     <tr>
         <th>Station Name</th>
@@ -63,19 +63,19 @@
                 {station.diesel_price}
             </td>
             <td>
-                <a href="#/station/{station._id}" class="button">
+                <a href="#/station/{station._id}" class="btn btn-success">
             <span class="icon is-small">
               <i class="fas fa-folder-open"></i>
             </span>
                 </a>
             </td>
             <td>
-                <a href="#/placemark/{station.stationid}/station/{station._id}" class="button">
+                <a href="#/placemark/{station.stationid}/station/{station._id}" class="btn btn-success">
                     <i class="fas fa-pen"></i>
                 </a>
             </td>
             <td>
-                <button on:click={() => { deleteStation(station._id) }} class="button">
+                <button on:click={() => { deleteStation(station._id) }} class="btn btn-danger">
                     <i class="fas fa-trash"></i>
                 </button>
             </td>

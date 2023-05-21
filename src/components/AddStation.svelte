@@ -49,7 +49,7 @@
 
 <form on:submit|preventDefault={addStations}>
     <label class="label">Enter Station Details:</label>
-    <div class="field is-horizontal has-background-warning-light">
+    <div class="field is-horizontal is-fullwidth is-striped">
         <div class="field-body">
             <div class="field">
                 <label for="title" class="label">Station name</label>
@@ -81,7 +81,7 @@
                 <input bind:value={diesel_price} id="diesel_price" class="input" type="number" placeholder="Enter Diesel Price" name="diesel_price" />
            </div>
         </div>
-    <button class="button is-warning">Add Station</button>
+    <button type="button" class="btn btn-success">Add Station</button>
 </form>
 {#if errorMessage}
     <div class="section">

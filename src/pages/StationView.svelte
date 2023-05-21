@@ -24,7 +24,7 @@
     <div class="column ">
         <div class="title">{station.title}</div>
         <div class="box">
-            <table class="table is-fullwidth is-striped has-background-warning-light">
+            <table class="table is-fullwidth is-striped background-is green">
                 <thead>
                 <tr>
                     <th>Station Name</th>
