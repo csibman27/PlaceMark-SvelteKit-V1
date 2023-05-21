@@ -1,5 +1,4 @@
 <script>
-    import github from "/src/assets/github.png";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
 
