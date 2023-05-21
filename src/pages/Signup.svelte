@@ -1,5 +1,4 @@
 <script>
-    import signuptips from "/src/assets/sign-up-tip.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import SignupForm from "../components/SignupForm.svelte";
