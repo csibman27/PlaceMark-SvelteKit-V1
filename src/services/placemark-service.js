@@ -4,7 +4,7 @@ import sanitizeHtml from "sanitize-html";
 
 // hapi hosted https://render.com
 export class PlacemarkService {
-    baseUrl = "";
+    baseUrl = "https://placemark-stations2.onrender.com";
 
     constructor(baseUrl) {
         this.baseUrl = baseUrl;
