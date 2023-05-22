@@ -1,47 +1,48 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+
+  import { setContext } from "svelte";
+  import Main from "./pages/Main.svelte";
+  import Router from "svelte-spa-router";
+  import Login from "./pages/Login.svelte";
+  import Signup from "./pages/Signup.svelte";
+  import Dashboard from "./pages/Dashboard.svelte";
+  import { PlacemarkService } from "./services/placemark-service";
+  import Map from "./pages/Map.svelte";
+  import PlacemarkView from "./pages/PlacemarkView.svelte";
+  import Charts from "./pages/Charts.svelte";
+  import StationView from "./pages/StationView.svelte";
+  import Analytics from "./pages/Analytics.svelte";
+  import User from "./pages/User.svelte";
+  import EditStation from "./pages/EditStation.svelte";
+  import Github from "./pages/Github.svelte";
+
+
+
+  //setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
+  //setContext("PlacemarkService", new PlacemarkService("https://placemark-stations2.onrender.com"));
+  setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
+
+  let routes = {
+    "/": Main,
+    "/login": Login,
+    "/signup": Signup,
+    "/dashboard": Dashboard,
+    "/main": Main,
+    "/logout": Main,
+    "/map": Map,
+    "/placemark/:id": PlacemarkView,
+    "/charts": Charts,
+    "/station/:stationid": StationView,
+    "/analytics": Analytics,
+    "/user": User,
+    "/placemark/:placemarkidid/station/:stationid": EditStation,
+    "/github": Github
+
+
+
+  }
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
+<div class="container">
+  <Router {routes}/>
+</div>
