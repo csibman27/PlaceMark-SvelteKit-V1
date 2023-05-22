@@ -81,7 +81,7 @@
                 <input bind:value={diesel_price} id="diesel_price" class="input" type="number" placeholder="Enter Diesel Price" name="diesel_price" />
            </div>
         </div>
-    <button type="button" class="btn btn-success">Add Station</button>
+    <button class="button">Add Station</button>
 </form>
 {#if errorMessage}
     <div class="section">
