@@ -1,5 +1,5 @@
 <script>
-    import depo from "/src/assets/depo.png";
+    import depo from "/src/assets/depo.jpg";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import LoginForm from "../components/LoginForm.svelte";

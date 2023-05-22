@@ -1,4 +1,5 @@
 <script>
+    import github from "/src/assets/github.png";
     import WelcomeNavigator from "../components/WelcomeNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
 
@@ -15,7 +16,7 @@
 
 <div class="columns">
     <div class="column has-text-centered">
-        <!--<img alt="depo" src="{github}" width="500">-->
+        <img alt="depo" src="{github}" width="500">
     </div>
     <div class="column">
         <div class="box">

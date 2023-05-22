@@ -3,6 +3,7 @@
     import {getContext, onMount} from "svelte";
 
     const stationService = getContext("PlacemarkService");
+    export let placemarkId;
 
     const mapConfig = {
         location: {lat: 52.160858, lng: -7.152420},

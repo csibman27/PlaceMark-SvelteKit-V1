@@ -1,5 +1,5 @@
 <script>
-    import depo from "/src/assets/depo.png";
+    import depo from "/src/assets/depo.jpg";
     import {user} from "../stores.js"
     export let title = "";
     export let subTitle = "";
