@@ -1,9 +1,6 @@
 <script>
     import { onMount, getContext } from "svelte";
     import MainNavigator from "../components/MainNavigator.svelte";
-    import StationViewImageForm from "../components/StationViewImageForm.svelte";
-    //import UploadImage from "../components/UploadImage.svelte";
-
 
     let station = {};
     export let params;
@@ -65,7 +62,5 @@
         </div>
     </div>
 </section>
-
-<StationViewImageForm stationid={station._id} images={station.images} on:message={refreshStation}/>
 
 
